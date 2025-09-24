@@ -12,4 +12,16 @@ public class EntryGate {
     public Ticket generateTicket(Vehicle vehicle) {
         return lot.parkVehicle(vehicle);
     }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public int getZ() {
+        return z;
+    }
 }

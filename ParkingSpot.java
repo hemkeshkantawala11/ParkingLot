@@ -5,10 +5,10 @@ public class ParkingSpot {
     private final int x, y, z;  // coordinates
     private Vehicle currentVehicle;
 
-    public ParkingSpot(int id, SpotType type, boolean hasChargingPoint, int x, int y, int z) {
+    public ParkingSpot(int id, SpotType type, int x, int y, int z, int par4) {
         this.id = id;
         this.type = type;
-        this.hasChargingPoint = hasChargingPoint;
+        this.hasChargingPoint = type == SpotType.ELECTRIC || par4 == 1;
         this.x = x;
         this.y = y;
         this.z = z;
