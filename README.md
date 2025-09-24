@@ -1,8 +1,8 @@
-# 🚗 Parking Lot Management System
+# Parking Lot Management System
 
 A comprehensive Java-based parking lot management system implementing low-level design (LLD) principles with multiple design patterns and optimization strategies.
 
-## 📋 Table of Contents
+## Table of Contents
 - [Overview](#overview)
 - [classDiagram](#classDiagram)
 - [Features](#features)
@@ -15,7 +15,7 @@ A comprehensive Java-based parking lot management system implementing low-level 
 - [Performance](#performance)
 - [Future Enhancements](#future-enhancements)
 
-## 🎯 Overview
+## Overview
 
 This parking lot management system is designed to handle vehicle parking and exit operations efficiently. The system supports multiple vehicle types, different parking spot sizes, electric vehicle charging spots, and implements various optimization strategies for slot allocation.
 
@@ -30,32 +30,32 @@ This parking lot management system is designed to handle vehicle parking and exi
 - **Optimized slot finding algorithms** (Linear scan O(N) vs BST O(log N))
 - **Electric vehicle charging support**
 
-## ✨ Features
+## Features
 
 ### Vehicle Management
-- 🏍️ **Bikes** - Uses small spots
-- 🚗 **Cars** - Uses medium spots  
-- 🚌 **Buses** - Uses large spots
-- ⚡ **Electric Bikes** - Uses electric spots (fallback to small)
-- 🔋 **Electric Cars** - Uses electric spots (fallback to medium)
+- **Bikes** - Uses small spots
+- **Cars** - Uses medium spots  
+- **Buses** - Uses large spots
+- **Electric Bikes** - Uses electric spots (fallback to small)
+- **Electric Cars** - Uses electric spots (fallback to medium)
 
 ### Spot Management
-- 📏 **Multiple spot sizes** (Small, Medium, Large, Electric)
-- 🎯 **Smart allocation** with vehicle-spot compatibility
-- 📍 **Distance-based optimization** for closest spot allocation
-- 🔄 **Fallback mechanism** when preferred spots are unavailable
+- **Multiple spot sizes** (Small, Medium, Large, Electric)
+- **Smart allocation** with vehicle-spot compatibility
+- **Distance-based optimization** for closest spot allocation
+- **Fallback mechanism** when preferred spots are unavailable
 
 ### Pricing System
-- 💰 **Flexible pricing strategies** (Per-hour pricing implemented)
-- 📊 **Extensible pricing models**
-- 🎫 **Ticket-based billing system**
+- **Flexible pricing strategies** (Per-hour pricing implemented)
+- **Extensible pricing models**
+- **Ticket-based billing system**
 
 ### Performance Optimization
-- 🔍 **Linear Scan Strategy** - Simple O(N) approach
-- 🌳 **BST Strategy** - Optimized O(log N) slot finding using Binary Search Tree
-- 📐 **Distance-based sorting** for closest spot allocation
+- **Linear Scan Strategy** - Simple O(N) approach
+- **BST Strategy** - Optimized O(log N) slot finding using Binary Search Tree
+- **Distance-based sorting** for closest spot allocation
 
-## 🏗️ System Architecture
+## System Architecture
 
 The system follows SOLID principles and implements several design patterns:
 
@@ -90,7 +90,7 @@ The system follows SOLID principles and implements several design patterns:
           └───────────────┘
 ```
 
-## 🎨 Design Patterns Used
+## Design Patterns Used
 
 1. **Builder Pattern** - `ParkingLot.Builder` for complex object construction
 2. **Strategy Pattern** - `SlotAllocationStrategy` and `PricingStrategy` interfaces
@@ -98,7 +98,7 @@ The system follows SOLID principles and implements several design patterns:
 4. **Observer Pattern** - Spot availability tracking
 5. **Template Method** - Vehicle hierarchy with abstract methods
 
-## 📁 Class Structure
+## Class Structure
 
 ### Core Classes
 - **`ParkingLot`** - Main parking lot management
@@ -128,7 +128,7 @@ Vehicle (Abstract)
 - **`EntryGate`** - Vehicle entry and ticket generation
 - **`ExitGate`** - Vehicle exit and payment processing
 
-## 🚀 Setup and Installation
+## Setup and Installation
 
 ### Prerequisites
 - Java 8 or higher
@@ -152,7 +152,7 @@ Vehicle (Abstract)
    java Main
    ```
 
-## 💻 Usage
+## Usage
 
 ### Basic Usage Example
 
@@ -194,7 +194,7 @@ double price = exit.processExit(ticket);
 | Electric Bike | Electric | Small |
 | Electric Car | Electric | Medium, Large |
 
-## ⚙️ Configuration
+## Configuration
 
 ### Slot Allocation Strategies
 
@@ -220,7 +220,7 @@ ParkingLot lot = new ParkingLot.Builder()
     .build();
 ```
 
-## 📊 Performance
+## Performance
 
 ### Algorithm Comparison
 
@@ -236,7 +236,7 @@ ParkingLot lot = new ParkingLot.Builder()
 - **Large lots (> 100 spots)**: Use BST Strategy
 - **Distance matters**: Always use BST with `SpotDistanceComparator`
 
-## 🔧 Extensibility
+## Extensibility
 
 ### Adding New Vehicle Types
 1. Extend `Vehicle` class
@@ -252,7 +252,7 @@ ParkingLot lot = new ParkingLot.Builder()
 1. Implement `SlotAllocationStrategy` interface
 2. Implement `findSpot()` method with custom logic
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
